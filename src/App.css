@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#nameinputdiv {
+  position: relative;
+  width: 100vw;
+  top: 40vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+#namebuttondiv {
+  position: relative;
+  width: 100vw;
+  top: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 90%;
+  object-fit: cover;
+}
+
+center {
+  width: 100vw;
+}
+
+#namediv {
+  height: 100vh;
+}
+
+#nameinput {
+  font-size: 15px;
+  color: #222222;
+  width: 300px;
+  border: none;
+  border-bottom: solid #aaaaaa 1px;
+  padding-bottom: 10px;
+  text-align: center;
+  position: relative;
+  background: none;
+  z-index: 5;
+}
+
+#nameinput::placeholder { color: #aaaaaa; }
+#nameinput:focus { outline: none; }
+
+#namespan {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;  /* right로만 바꿔주면 오 - 왼 */
+  background-color: #666;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+#namelabel {
+position: absolute;
+color: #aaa;
+left: 50%;
+transform: translateX(-50%);
+font-size: 20px;
+transition: all .2s;
+}
+
+#nameinput:focus ~ label, input:valid ~ label {
+font-size: 16px;
+top: -30px;
+color: #666;
+font-weight: bold;
+}
+
+#nameinput:focus ~ span, input:valid ~ span {
+  width: 300px;
+}
+
+center {
+  height: 100vh;
+  position: absolute;
+}
+
+
+#namebutton {
+  margin-top: 1vh;
+  outline: none;
+  line-height: 39px;
+  padding: 0;
+  width: 20vw;
+  background-color: white;
+}
+
+#namebutton span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  height: 100vh;
+}
+
+.identifybutton {
+  background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 200px;
+  height: 40px;
   color: white;
+  font-size: medium;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.identifybutton span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#identifybuttondiv {
+  position: relative;
+  width: 100vw;
+  top: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+#identifydiv {
+  height: 100vh;
 }

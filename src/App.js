@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { useState } from 'react';
+import { Greeting } from './pages/Greeting';
+import { Identify } from './pages/Identify';
+import { Gift } from './pages/Gift';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [page, setPage] = useState(0)
+  
+  if (page == 0) {
+    return (
+      <Greeting setPage={setPage}/>
+    )
+  } else if (page == 1) {
+    return(
+      <Identify setPage={setPage}/>
+    )
+  } else if (page == 2) {
+    return (
+      <Gift/>
+    )
+  }
 }
 
 export default App;
